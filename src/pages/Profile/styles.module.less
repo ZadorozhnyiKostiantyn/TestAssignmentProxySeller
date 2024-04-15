@@ -1,0 +1,37 @@
+@import "../../assets/styles/variables.less";
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  padding: 0 calc((100% - 80vw) / 2);
+  min-width: 320px;
+  background-color: @BackgroundColor;
+}
+
+.profile {
+  border: @AvatarBorder;
+}
+
+.avatarImage {
+  width: @avatar-size;
+  height: @avatar-size;
+  margin-top: calc(@avatar-size / 2 * -1);
+  border: @AvatarBorder;
+}
+
+@media screen and (max-width: 748px) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .avatarImage {
+    width: calc(@avatar-size / 1.5);
+    height: calc(@avatar-size / 1.5);
+    margin-top: calc(@avatar-size / 3.5 * -1);
+    border-radius: 50%;
+  }
+}

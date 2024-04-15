@@ -1,0 +1,28 @@
+.imagePreview {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  align-items: start;
+}
+
+.imagePreviewDetails {
+  border-radius: 0px;
+  height: 100%;
+  width: 500px;
+}
+
+.cardContent {
+  border: none;
+  text-align: start;
+}
+
+@media screen and (max-width: 968px) {
+  .imagePreview {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imagePreviewDetails {
+    width: 100%;
+  }
+}

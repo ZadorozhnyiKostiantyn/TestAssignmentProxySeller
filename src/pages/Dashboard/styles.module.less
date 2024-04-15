@@ -1,0 +1,42 @@
+.listUsers {
+  width: 100vw;
+  padding: 10px 0;
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, 300px);
+}
+
+.spin {
+  margin-top: 25vh;
+}
+
+.gridHeader {
+  display: grid;
+  width: 80%;
+  margin-top: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filters {
+  justify-content: end;
+}
+
+.searchBar {
+  width: 300px;
+}
+
+@media screen and (max-width: 631px) {
+  .gridHeader {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .searchBar {
+    justify-content: center;
+  }
+}
