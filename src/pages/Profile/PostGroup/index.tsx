@@ -31,7 +31,7 @@ const PostGroup = ({ user, isLoading }: PostGroupProps) => {
       >
         <Flex gap={"small"} className={styles.postGroup} vertical>
           {posts?.map((post) => (
-            <Post post={post} user={user}/>
+            <Post key={post.id} post={post} user={user} />
           ))}
         </Flex>
       </Spin>

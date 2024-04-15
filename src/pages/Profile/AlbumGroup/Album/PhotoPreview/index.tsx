@@ -25,6 +25,7 @@ const PhotoPreview = ({
         style={{
           ...originalNode.props.style,
           height: "100%",
+          width: "100%",
         }}
       />
       <Card
