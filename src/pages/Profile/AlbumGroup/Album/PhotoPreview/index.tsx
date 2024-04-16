@@ -24,9 +24,9 @@ const PhotoPreview = ({
         alt={originalNode.props.alt}
         style={{
           ...originalNode.props.style,
-          height: "100%",
-          width: "100%",
+          // height: "100%",
         }}
+        className={styles.image}
       />
       <Card
         className={styles.imagePreviewDetails}
@@ -38,12 +38,11 @@ const PhotoPreview = ({
           username={user?.username}
           name={user?.name}
         />
-        <Card className={styles.cardContent}>
-          <Card.Meta
-            title={title}
-            description={description}
-          />
-        </Card>
+        <Card.Meta
+          title={title}
+          description={description}
+          className={styles.cardContent}
+        />
       </Card>
     </div>
   );

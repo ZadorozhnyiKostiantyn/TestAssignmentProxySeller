@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import { AlbumType, PhotoType, UserType } from "../../../../types";
 import { Image } from "antd";
-import "./styles.less";
 import { useSearchParams } from "react-router-dom";
 import PhotoPreview from "./PhotoPreview";
 import { SEARCH_PARAMS } from "../../../../constants";
+import "./styles.less";
 
 interface AlbumProps {
   user?: UserType;
@@ -70,10 +70,10 @@ const Album = ({ album, photos, user }: AlbumProps) => {
         onChange: handleImageChange,
         imageRender: imageRender,
         visible: visible,
-        current: Number(searchParams.get("photoId")) || 0,
+        current: Number(searchParams.get(SEARCH_PARAMS.photoId)) || 0,
       }}
     >
-      <Image src={photos[0].url} onClick={handleClick} />
+      <Image src={photos[0].url} onClick={handleClick}/>
     </Image.PreviewGroup>
   );
 };

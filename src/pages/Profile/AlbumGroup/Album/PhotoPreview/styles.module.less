@@ -5,6 +5,10 @@
   align-items: flex-start;
 }
 
+.image {
+  height: 100%;
+}
+
 .imagePreviewDetails {
   border-radius: 0;
   height: 100%;
@@ -12,11 +16,17 @@
 }
 
 .cardContent {
+  padding: 24px 0;
   border: none;
   text-align: start;
 }
 
 @media screen and (max-width: 968px) {
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+
   .imagePreview {
     display: flex;
     flex-direction: column;

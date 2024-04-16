@@ -1,17 +1,17 @@
-import { Card, Modal } from "antd";
-import React, { useState } from "react";
+import {Card, Modal} from "antd";
+import React, {useState} from "react";
 import UserProfile from "../../../../components/UserProfile";
-import { PostType, UserType } from "../../../../types";
+import {PostType, UserType} from "../../../../types";
 import * as styles from "./styles.module.less";
-import { useSearchParams } from "react-router-dom";
-import { SEARCH_PARAMS } from "../../../../constants";
+import {useSearchParams} from "react-router-dom";
+import {SEARCH_PARAMS} from "../../../../constants";
 
 interface PostProps {
   post: PostType;
   user?: UserType;
 }
 
-const Post = ({ post, user }: PostProps) => {
+const Post = ({post, user}: PostProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [open, setOpen] = useState(
     Number(searchParams.get(SEARCH_PARAMS.postId)) === post.id
@@ -39,23 +39,38 @@ const Post = ({ post, user }: PostProps) => {
         width={"80%"}
         centered
       >
-        <Card key={post.id} className={styles.modalContent}>
-          <UserProfile username={user?.username} name={user?.name} />
-          <Card className={styles.postData}>
-            <Card.Meta title={post.title} description={post.body} />
-          </Card>
+        <Card
+          className={styles.modalContent}
+          styles={{
+            body: {
+              padding: "24px 24px"
+            }
+          }}>
+          <UserProfile username={user?.username} name={user?.name}/>
+          <Card.Meta
+            title={post.title}
+            description={post.body}
+            className={styles.postData}/>
         </Card>
       </Modal>
       <Card
-        key={post.id}
         hoverable
         className={styles.posts}
         onClick={handleOpen}
+        styles={{
+          body: {
+            padding: "24px 48px"
+          }
+        }}
       >
-        <UserProfile username={user?.username} name={user?.name} />
-        <Card className={styles.postData}>
-          <Card.Meta title={post.title} description={post.body} />
-        </Card>
+        <UserProfile username={user?.username} name={user?.name}/>
+        <Card.Meta
+          style={{
+            whiteSpace: "pre-line !important"
+          }}
+          title={post.title}
+          description={post.body}
+          className={styles.postData}/>
       </Card>
     </>
   );
