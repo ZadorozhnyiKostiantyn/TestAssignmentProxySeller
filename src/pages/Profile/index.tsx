@@ -4,7 +4,7 @@ import { fetchUserById } from "../../api/api";
 import React from "react";
 import { Card, Col, Layout, Row } from "antd";
 import Head from "../../components/Head";
-import styles from "./styles.module.less";
+import * as styles from "./styles.module.less";
 import "./styles.module.less";
 import UserProfile from "../../components/UserProfile";
 import { QUERY_KEY } from "../../constants";

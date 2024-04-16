@@ -51,7 +51,6 @@ const plugins = [
         coast: false, // Opera Coast icon.
         firefox: false, // Firefox OS icons.
         windows: false, // Windows 8 tile icons.
-        yandex: false, // Yandex browser icon.
       },
     },
     cache: false, // Disallow caching the assets across webpack builds.
@@ -132,9 +131,8 @@ module.exports = {
       },
       // --- HTML
       { test: /\.(html)$/, use: ["html-loader"] },
-      // --- S/A/C/SS
       {
-        test: /\.(s[ac]|c)ss$/i,
+        test: /\.((c|le)ss)$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -170,9 +168,6 @@ module.exports = {
       {
         test: /\.less$/i,
         use: [
-          // compiles Less to CSS
-          "style-loader",
-          "css-loader",
           "less-loader",
         ],
       },

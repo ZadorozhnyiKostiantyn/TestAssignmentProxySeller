@@ -1,7 +1,7 @@
 import { Avatar, Card } from "antd";
 import React from "react";
 import { CSSProperties } from "react";
-import styles from "./styles.module.less"
+import {avatar} from "./styles.module.less";
 
 const { Meta } = Card;
 
@@ -25,7 +25,7 @@ const UserProfile = ({
   return (
     <Meta style={style}
       avatar={
-        <Avatar style={avatarStyle} className={`${styles.avatar} ${avatarClassName}`} src={src} />
+        <Avatar style={avatarStyle} className={`${avatar} ${avatarClassName}`} src={src} />
       }
       title={name}
       description={`@${username}`}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { IdcardOutlined, SaveOutlined } from "@ant-design/icons";
 import UserProfile from "../../../../components/UserProfile";
 
-import styles from "./styles.module.less"
+import * as styles from "./styles.module.less";
 
 interface ListUsersProps {
   data: UserType[];

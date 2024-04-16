@@ -5,7 +5,7 @@ import AlbumGroup from "../AlbumGroup";
 import PostGroup from "../PostGroup";
 import { UserType } from "../../../types";
 import { useNavigate, useParams } from "react-router-dom";
-import styles from "../styles.module.less"
+import * as styles from "../styles.module.less";
 
 interface ProfileTabsProps {
   user?: UserType;

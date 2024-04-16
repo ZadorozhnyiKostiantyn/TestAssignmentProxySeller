@@ -14,7 +14,7 @@ interface AlbumProps {
 
 const Album = ({ album, photos, user }: AlbumProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const visible = album.id === Number(searchParams.get("albumId"));
+  const visible = album.id === Number(searchParams.get(SEARCH_PARAMS.albumId));
 
   const photosUrl = useMemo(() => {
     return photos?.map((photo) => photo.url);
@@ -49,7 +49,6 @@ const Album = ({ album, photos, user }: AlbumProps) => {
   const imageRender = (
     originalNode: React.ReactElement,
     info: {
-      transform: any;
       current: number;
     }
   ) => {

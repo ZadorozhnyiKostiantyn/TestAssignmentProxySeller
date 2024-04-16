@@ -2,7 +2,7 @@ import { Card, Modal } from "antd";
 import React, { useState } from "react";
 import UserProfile from "../../../../components/UserProfile";
 import { PostType, UserType } from "../../../../types";
-import styles from "./styles.module.less";
+import * as styles from "./styles.module.less";
 import { useSearchParams } from "react-router-dom";
 import { SEARCH_PARAMS } from "../../../../constants";
 
@@ -14,7 +14,7 @@ interface PostProps {
 const Post = ({ post, user }: PostProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [open, setOpen] = useState(
-    Number(searchParams.get(SEARCH_PARAMS.postId)) === post.id ? true : false
+    Number(searchParams.get(SEARCH_PARAMS.postId)) === post.id
   );
 
   const handleOpen = () => {

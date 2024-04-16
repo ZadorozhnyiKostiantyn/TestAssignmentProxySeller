@@ -34,8 +34,8 @@
     ]
   },
   "include": [
-    "src/**/*",
-    "./externals.d.ts"
+    "src/**/*"
+//    "./externals.d.ts"
   ],
   "exclude": [
     "node_modules",

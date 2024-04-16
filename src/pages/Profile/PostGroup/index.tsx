@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchPostsByUserId } from "../../../api/api";
 import { useParams } from "react-router-dom";
 import Head from "../../../components/Head";
-import styles from "./styles.module.less";
+import * as styles from "./styles.module.less";
 import { QUERY_KEY } from "../../../constants";
 import Post from "./Post";
 

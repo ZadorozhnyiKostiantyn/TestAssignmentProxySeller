@@ -14,7 +14,7 @@ import { useSearchParams } from "react-router-dom";
 import { sortUsersByUsername } from "../../utils/utils";
 import Head from "../../components/Head";
 import { QUERY_KEY, SEARCH_PARAMS, SORT_DIRECTION } from "../../constants";
-import styles from "./styles.module.less";
+import * as styles from "./styles.module.less";
 
 export default function Dashboard() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -42,7 +42,7 @@ export default function Dashboard() {
       setSearchParams({
         [SEARCH_PARAMS.search]: searchQuery,
       });
-      return 
+      return;
     }
 
     const order: Order =
